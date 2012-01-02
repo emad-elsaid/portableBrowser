@@ -1,10 +1,10 @@
 var cmdLine = window.arguments[0];
 cmdLine = cmdLine.QueryInterface(Components.interfaces.nsICommandLine);
-var filepath = cmdLine.handleFlagWithParam("url", false);
+var filepath = cmdLine.getArgument(0);
 
 function changeTitle(){
 	var browser = document.getElementById("browser");
-	document.getElementById("main").setAttribute("title",browser.contentTitle+" - "+param);
+	document.getElementById("main").setAttribute("title",browser.contentTitle);
 }
 window.setInterval("changeTitle()", 1000);
 
