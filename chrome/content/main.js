@@ -12,4 +12,5 @@ function Init(){
 	if( filepath==undefined )
 		filepath = "about:blank";
 	document.getElementById("browser").setAttribute("src", filepath);
+	setInterval('changeTitle()',1000);
 }
