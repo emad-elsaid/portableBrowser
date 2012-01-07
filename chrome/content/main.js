@@ -6,9 +6,10 @@ function changeTitle(){
 	var browser = document.getElementById("browser");
 	document.getElementById("main").setAttribute("title",browser.contentTitle);
 }
-window.setInterval("changeTitle()", 1000);
 
-function setURL(){
+function Init(){
+
+	if( filepath==undefined )
+		filepath = "about:blank";
 	document.getElementById("browser").setAttribute("src", filepath);
 }
-window.setTimeout("setURL()", 1000);
