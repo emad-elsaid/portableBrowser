@@ -1,5 +1,7 @@
 What is it ? 
 ===================
+![screenshot](https://github.com/blazeeboy/portableBrowser/raw/master/screenshot.PNG)
+
 this is a light weight browser using Mozilla XULrunner
 you can use it to view any web page,
 
