@@ -9,8 +9,21 @@ function changeTitle(){
 
 function Init(){
 
-	if( filepath==undefined )
+	if( filepath==undefined ) {
 		filepath = "about:blank";
-	document.getElementById("browser").setAttribute("src", filepath);
+	} else {
+		document.getElementById("addressbar").hidden = true;
+		document.getElementById("browser").loadURI(filepath);
+	}
 	setInterval('changeTitle()',1000);
+}
+
+function gotoURL(event){
+
+	if(event.keyCode==13){
+		var addressBar = document.getElementById("addressbar");
+		var browser = document.getElementById("browser");
+		browser.loadURI( addressBar.value );
+	}
+	
 }

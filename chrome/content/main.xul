@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<window id="main" title="Browser" width="800" height="600" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" onload="Init()" >
+<window id="main" title="Browser" width="800" height="600" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" onload="Init()">
 	
 	<script type="application/javascript" src="chrome://myapp/content/main.js"/>
-	<browser id="browser" src="about:blank" flex="1" onload="changeTitle()" style="background:url('chrome://myapp/content/images/loading.png') no-repeat center center;"/>
-	
+	<vbox flex="1" style="padding:0px;margin:0px;" >
+			<textbox id="addressbar" style="padding:5px;margin:0px;" placeholder="Please enter website Address here" onkeypress="gotoURL(event)"/>
+		<browser id="browser" src="about:blank" flex="1" onload="changeTitle()" style="background:url('chrome://myapp/content/images/loading.png') no-repeat center center;"/>
+	</vbox>
 </window>
